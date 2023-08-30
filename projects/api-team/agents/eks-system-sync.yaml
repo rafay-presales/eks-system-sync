@@ -1,0 +1,11 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: eks-system-sync
+  project: api-team
+spec:
+  active: true
+  cluster:
+    name: api-team-eks-65-demo
+  type: Cluster
+  version: r1.28.0

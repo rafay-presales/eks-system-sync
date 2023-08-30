@@ -1,0 +1,18 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  annotations:
+    rafay.dev/description: Repo for two-way system sync.
+  description: Repo for two-way system sync.
+  name: eks-system-sync
+  project: api-team
+spec:
+  agents:
+  - name: eks-system-sync
+  credentials:
+    password: sealed://credentials.password
+    username: kmadel
+  endpoint: https://github.com/rafay-presales/eks-system-sync.git
+  secret:
+    name: file://artifacts/eks-system-sync/sealed-secret.yaml
+  type: Git
